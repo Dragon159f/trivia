@@ -7,7 +7,7 @@ class QuestionTxt extends Component {
   render() {
     return (
     <div>
-        <h1>Question: When was the computer first invented?</h1>  
+        <h1>{this.props.text}</h1>  
     </div> 
     );
   }
