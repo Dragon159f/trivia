@@ -9,12 +9,12 @@ class Question extends Component {
   
   render() {
     return (
-      <div id="body">
+      <div className="question">
         <QuestionTxt />
-        <AnswerBtn />
-        <AnswerBtn /> 
-        <AnswerBtn />
-        <AnswerBtn /> 
+        <AnswerBtn text="1984"/>
+        <AnswerBtn text="1936"/> 
+        <AnswerBtn text="1962"/>
+        <AnswerBtn text="1925"/> 
       </div> 
     );
   }
