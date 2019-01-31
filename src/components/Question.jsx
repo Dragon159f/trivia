@@ -10,16 +10,18 @@ class Question extends Component {
   
   render() {
     return (
-      <div className="question">
-        <QuestionTxt text="Question: When was the computer first invented?"/>
-        <Image url="http://www.tech-faq.com/wp-content/uploads/who-invented-computer.jpg"/>
-        <AnswerBtn text="1984"/>
-        <AnswerBtn text="1936"/> 
-        <AnswerBtn text="1962"/>
-        <AnswerBtn text="1925"/> 
+      <div className="question" class="container">
+        <div clas="row">
+          <QuestionTxt text={this.props.question.question}/>
+          <Image url={this.props.question.url}/>
+            <AnswerBtn text={this.props.question.answerTxt[0]}/>
+            <AnswerBtn text={this.props.question.answerTxt[1]}/> 
+            <AnswerBtn text={this.props.question.answerTxt[2]}/>
+            <AnswerBtn text={this.props.question.answerTxt[3]}/> 
+        </div>
       </div> 
     );
   }
 }
 
-export {Question};
+export { Question };

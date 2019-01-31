@@ -6,11 +6,10 @@ class Image extends Component {
   
   render() {
     return (
-    //{}   <div className="Image">
+    <div className="Image">
         <img src={this.props.url}/>
     </div> 
     );}
   }
-}
 
 export { Image };
