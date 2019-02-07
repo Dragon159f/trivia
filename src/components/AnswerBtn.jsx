@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 
 
 class AnswerBtn extends Component {
-  
   render() {
     return (
     <div className="AnswerBtn">
-        <button id="answerBtn">{this.props.text}</button>
+        <button id="answerBtn" onClick={() => this.props.answer()}>
+          {this.props.text}
+        </button>
     </div> 
     );
   }

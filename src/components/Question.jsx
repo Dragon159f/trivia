@@ -14,10 +14,10 @@ class Question extends Component {
         <div clas="row">
           <QuestionTxt text={this.props.question.question}/>
           <Image url={this.props.question.url}/>
-            <AnswerBtn text={this.props.question.answerTxt[0]}/>
-            <AnswerBtn text={this.props.question.answerTxt[1]}/> 
-            <AnswerBtn text={this.props.question.answerTxt[2]}/>
-            <AnswerBtn text={this.props.question.answerTxt[3]}/> 
+            <AnswerBtn text={this.props.question.answerTxt[0]} answer={this.props.updateAnswer}/>
+            <AnswerBtn text={this.props.question.answerTxt[1]} answer={this.props.updateAnswer}/> 
+            <AnswerBtn text={this.props.question.answerTxt[2]} answer={this.props.updateAnswer}/>
+            <AnswerBtn text={this.props.question.answerTxt[3]} answer={this.props.updateAnswer}/> 
         </div>
       </div> 
     );
