@@ -23,10 +23,12 @@ class App extends Component {
     }
   }
   update_answerTxt(){
-    setState().Question2.answerTxt = ["Wrong","Correct","Wrong","Wrong"]
+    this.setState().Question2.answerTxt = ["Wrong","Correct","Wrong","Wrong"]
     alert("Pocket Monsters");
   };
-
+  nextQuestion(){
+    
+  }
   render() {
     return (
       <div className="app">
