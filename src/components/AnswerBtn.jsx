@@ -7,7 +7,7 @@ class AnswerBtn extends Component {
     return (
     <div className="AnswerBtn">
         <button id="answerBtn" onClick={() => this.props.answer()}>
-          {this.props.text}
+          {this.props.text} 
         </button>
     </div> 
     );
