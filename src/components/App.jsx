@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
 import '../css/App.css';
 import { Question } from './Question.jsx';
-//import{ buildFirebase} from '../clients/firebase';
+import { getQuestions } from '../clients/firebase.js';
+
 // import components
-//var firebaseDatabase = buildFirebase();
 class App extends Component {
   constructor(props){
+    
     super(props);
     this.state = {
       count: 0,
-      Question: [{
-        question: "Question: When was the computer first invented?",
-        url: "http://www.tech-faq.com/wp-content/uploads/who-invented-computer.jpg",
-        correctChoice: "1936",
-        userChoice: "",
-        answerTxt: ["1981", "1936", "1963", "1919"]        
-      },{
-        question: "Question: Who is this pokemon?",
-        url: "http://www.tech-faq.com/wp-content/uploads/who-invented-computer.jpg",
-        correctChoice: "Bulbasaur",
-        userChoice: "",
-        answerTxt: ["Bulbasaur", "Charmander", "Charizard", "Charmelon"]
+      pickedChoice: 3,
       }
-    ]}
+    getQuestions((questions) => {
+      console.log(questions);
+     this.setState({
+       ...this.state,
+       questions: questions
+      });
+    });
   }
 
   countUp(){
@@ -41,10 +37,17 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.questions);
+    if(this.state.questions === undefined){
+      return (<div>"Still loading"</div>);
+    }
+    //if(this.state.correct_choice_index === this.state.choice[this.state.correct_choice_index]){
+    //  alert("correct");
+    //}
     return (
       <div className="app">
         <h1>Kaboot</h1>
-        <Question question={this.state.Question[this.state.count]} updateAnswer={() => this.consoleCorrectorWrong()}/>
+        <Question question={this.state.questions[this.state.count]} updateAnswer={() => this.consoleCorrectorWrong()}/>
         <button onClick={() => this.countUp()}>Next</button>
       </div>
     );
