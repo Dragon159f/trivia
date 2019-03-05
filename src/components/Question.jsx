@@ -15,17 +15,17 @@ class Question extends Component {
           <Image/>
           <div class="row">
             <div class="col">
-              <AnswerBtn  text={this.props.question.choices[0]} answer={this.props.updateAnswer}/>
+              <AnswerBtn text={this.props.question.choices[0]} answer={this.props.updateAnswer} class="btn btn-outline-danger btn-lg btn-block"/>
             </div>
             <div class="col">
-              <AnswerBtn text={this.props.question.choices[1]} answer={this.props.updateAnswer}/> 
+              <AnswerBtn text={this.props.question.choices[1]} answer={this.props.updateAnswer} class="btn btn-outline-primary btn-lg btn-block"/> 
             </div>
             <div class="w-100"></div>
             <div class="col">
-              <AnswerBtn text={this.props.question.choices[2]} answer={this.props.updateAnswer}/>
+              <AnswerBtn text={this.props.question.choices[2]} answer={this.props.updateAnswer} class="btn btn-outline-success btn-lg btn-block"/>
             </div>
             <div class="col">
-              <AnswerBtn text={this.props.question.choices[3]} answer={this.props.updateAnswer}/>
+              <AnswerBtn text={this.props.question.choices[3]} answer={this.props.updateAnswer} class="btn btn-outline-warning btn-lg btn-block"/>
             </div>
           </div>
           

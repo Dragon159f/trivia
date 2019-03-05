@@ -40,7 +40,7 @@ class App extends Component {
   }
 
   consoleCorrectorWrong(){
-    var currectQuestion = this.state.questions[this.state.count];
+    let currectQuestion = this.state.questions[this.state.count];
     if(currectQuestion.choices[currectQuestion] === currectQuestion.correct_choice_index){  
       console.log("correct");
       this.setState({
