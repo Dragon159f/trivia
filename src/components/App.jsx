@@ -13,6 +13,9 @@ class App extends Component {
       score: 0,
       pickedChoice: 3,
       }
+
+      
+
     getQuestions((questions) => {
       console.log(questions);
      this.setState({
@@ -53,6 +56,7 @@ class App extends Component {
     if(this.state.questions === undefined){
       return (<div>"loading"</div>);
     }
+    
     return (
       <div className="app">
         <h1 id="kaboot">Kaboot</h1>
