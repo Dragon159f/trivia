@@ -7,7 +7,7 @@ class AnswerBtn extends Component {
   render() {
     return (
     <div className="AnswerBtn">
-        <button onClick={() => this.props.answer()} class={this.props.class} id={this.props.id}>
+        <button onClick={() => this.props.answer() || this.clickEvent() } class={this.props.class} id={this.props.id}>
           {this.props.text} 
         </button>
     </div> 

@@ -52,6 +52,10 @@ class App extends Component {
     }
   }
 
+  clickEvent(e) {
+    console.log(e.target.id);
+  }
+
   render() {
     if(this.state.questions === undefined){
       return (<div>"loading"</div>);
