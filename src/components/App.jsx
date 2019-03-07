@@ -10,8 +10,12 @@ class App extends Component {
     super(props);
     this.state = {
       count: 0,
+      score: 0,
       pickedChoice: 3,
       }
+
+      
+
     getQuestions((questions) => {
       console.log(questions);
      this.setState({
@@ -22,33 +26,42 @@ class App extends Component {
   }
 
   countUp(){
-    this.setState({
-      count: this.state.count + 1
-    })
-    console.log(this.state.count); 
+    if(this.state.count < this.state.questions.length){
+      this.setState({
+        count: this.state.count + 1
+      })
+    }
   }
 
-  returnUserChoice(){
-
+  endGame(){
+    if(this.state.score === this.state.questions.length-1){
+      alert('congrats');
+      this.setState({
+        score: this.state.questions.length-1
+      });
+    }
   }
 
   consoleCorrectorWrong(){
-      console.log("Correct");
+    let currectQuestion = this.state.questions[this.state.count];
+    if(currectQuestion.choices[currectQuestion] === currectQuestion.correct_choice_index){  
+      console.log("correct");
+      this.setState({
+        score: this.state.score + 1
+      });
+    }
   }
 
   render() {
-    console.log(this.state.questions);
     if(this.state.questions === undefined){
-      return (<div>"Still loading"</div>);
+      return (<div>"loading"</div>);
     }
-    //if(this.state.correct_choice_index === this.state.choice[this.state.correct_choice_index]){
-    //  alert("correct");
-    //}
+    
     return (
       <div className="app">
-        <h1>Kaboot</h1>
-        <Question question={this.state.questions[this.state.count]} updateAnswer={() => this.consoleCorrectorWrong()}/>
-        <button onClick={() => this.countUp()}>Next</button>
+        <h1 id="kaboot">Kaboot</h1>
+        <p>Score: {this.state.score}/{this.state.questions.length}</p>
+        <Question question={this.state.questions[this.state.count]} updateAnswer={() => this.countUp() || this.consoleCorrectorWrong() || this.endGame()}/>
       </div>
     );
   }

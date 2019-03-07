@@ -100,7 +100,7 @@ class App extends Component {
 
     firebaseDatabase.ref('/questions').on('value', (snapshot)=> {
       console.log(snapshot.val())
-    });
+    });0
 ```
 - [ ] use this.setState to change the state.
 
