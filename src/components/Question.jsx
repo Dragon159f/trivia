@@ -13,7 +13,6 @@ class Question extends Component {
       <div className="question" class="container">
         <div clas="row">
           <QuestionTxt text={this.props.question.question_text}/>
-            
             <AnswerBtn text={this.props.question.choices[0]} answer={this.props.updateAnswer}/>
             <AnswerBtn text={this.props.question.choices[1]} answer={this.props.updateAnswer}/> 
             <AnswerBtn text={this.props.question.choices[2]} answer={this.props.updateAnswer}/>
