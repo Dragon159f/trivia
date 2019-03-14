@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://scriptedcurriculum.github.io/studio2",
   "dependencies": {
-    "firebase": "^5.8.5",
+    "firebase": "^5.8.6",
     "lodash": "^4.17.11",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
