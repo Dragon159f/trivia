@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: gainsboro;
+  background-color: rgba(0, 0, 0, 0.900);
 }
 
 .app {
@@ -16,6 +16,13 @@ body {
   animation-iteration-count: infinite;
   font-weight: bold;
 /*   animation-direction: alternate; */
+}
+#score{
+  color:white;
+}
+#loading{
+  color:white;
+  font-size: 50px;
 }
 @keyframes colorChange{
   from{color:red}
